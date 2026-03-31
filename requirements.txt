@@ -1,4 +1,0 @@
-openenv-core[core]>=0.2.2
-requests>=2.32.0
-openai>=1.50.0
-pyyaml>=6.0.2
