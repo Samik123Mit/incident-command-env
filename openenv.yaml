@@ -1,0 +1,26 @@
+name: incident-command-env
+description: >
+  A production incident response environment where AI agents diagnose and resolve
+  infrastructure incidents by reading alerts, querying logs, inspecting metrics,
+  and taking remediation actions. Simulates real SRE/DevOps workflows.
+author: Samiksha Mitra
+tags:
+  - openenv
+  - incident-response
+  - sre
+  - devops
+  - real-world
+version: "1.0.0"
+tasks:
+  - id: easy_oom_kill
+    name: "OOM Kill: Web Server Memory Leak"
+    description: "Single-service memory leak causing OOM kills. Identify and restart."
+    difficulty: easy
+  - id: medium_connection_pool
+    name: "Connection Pool Exhaustion: Database Bottleneck"
+    description: "App errors from DB connection pool exhaustion after a bad deploy."
+    difficulty: medium
+  - id: hard_cascading_failure
+    name: "Cascading Failure: Deploy-Triggered Multi-Service Outage"
+    description: "Bad deploy triggers cascading failures across three services with misleading alerts."
+    difficulty: hard

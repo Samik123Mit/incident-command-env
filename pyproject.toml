@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openenv-incident-command-env"
+version = "1.0.0"
+description = "Production incident response environment for AI agent evaluation"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Samiksha Mitra", email = "isamikshasam@gmail.com"},
+]
+dependencies = [
+    "openenv-core[core]>=0.2.2",
+    "requests>=2.32.0",
+    "openai>=1.50.0",
+    "pyyaml>=6.0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.scripts]
+server = "incident_command_env.server.app:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["incident_command_env", "incident_command_env.server", "incident_command_env.tasks"]
+package-dir = { "incident_command_env" = ".", "incident_command_env.server" = "server", "incident_command_env.tasks" = "tasks" }
